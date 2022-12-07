@@ -1,41 +1,53 @@
 <template>
+	<view class="status_bar" style="height: var(--status-bar-height); width: 100%;"></view>
 	<view>
-		<view class="status_bar" style="height: var(--status-bar-height); width: 100%;"></view>
 		<section class="aui-flexView">
 			<header class="aui-navBar aui-navBar-fixed">
-				<a href="javascript:;" class="aui-navBar-item">
-					我的书架
-				</a>
-				<div class="aui-center">
-					<span class="aui-center-title"></span>
+				<div class="aui-center aui-center-clear">
+					<div class="aui-head-nav">
+						<a href="javascript:;" v-on:click="showBookTrend()"> 推荐</a>
+						<a href="javascript:;" class="aui-active-hover">关注</a>
+					</div>
 				</div>
 				<a href="javascript:;" class="aui-navBar-item">
+					<i class="icon icon-add"></i>
 					<i class="icon icon-search"></i>
-					<i class="icon icon-more"></i>
 				</a>
 			</header>
 			<section class="aui-scrollView">
-				<div class="aui-call-box">
-					<h1>最近阅读的书都会放在这里</h1>
-				</div>
-				<div class="aui-list-theme">
-					<a href="javascript:;" class="aui-list-theme-item">
-						<div class="aui-list-img">
-							<image mode='widthFix' src="../../static/bookshelf/images/call-book-01.png" alt=""></image>
-						</div>
-						<div class="aui-list-title">
-							<h3>桃花村的医生</h3>
-							<div class="aui-flex">
-								<div class="aui-flex-box">
-									<span>连载</span>
-								</div>
-								<div class="aui-right-text">
-									<span>未读</span>
-								</div>
+				<div class="aui-link-list">
+					<a href="javascript:;" class="aui-link-item">
+						<div class="aui-flex">
+							<div class="aui-ges-user">
+								<image mode='widthFix' src="../../static/trends/images/user-logo-000.png" alt=""></image>
+							</div>
+							<div class="aui-flex-box">
+								<h3>有书故事</h3>
+								<p>52分钟</p>
+							</div>
+							<div class="aui-more-icon">
+								<i class="icon icon-more"></i>
 							</div>
 						</div>
+						<div class="aui-flex" style="padding-top:2px;">
+							<div class="aui-flex-box">
+								<h4>有故事书:大学老师玩转短视频大学老师玩转短视频</h4>
+								<p>在有故事书的，遇见书友们自己的故事，上一期，跟我们见面的书友是不愿意让孩子瞧不起自己而是一年怒听100多本书</p>
+							</div>
+							<div class="aui-book-img">
+								<image mode='widthFix' src="../../static/trends/images/ad-text1.png" alt=""></image>
+							</div>
+						</div>
+						<div class="aui-flex" style="padding-top:0">
+							<div class="aui-flex-box">
+								<span> <i class="icon icon-dz"></i>192</span>
+								<span> <i class="icon icon-pl"></i>290</span>
+							</div>
+						</div>
+						<div class="divHeight"></div>
 					</a>
 				</div>
+				<div style="height:53px;"></div>
 			</section>
 			<footer class="aui-footer aui-footer-fixed">
 				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookStore()">
@@ -44,19 +56,19 @@
 						</span>
 					<span class="aui-tabBar-item-text">书城</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookCatalog()">
+				<a href="javascript:;" class="aui-tabBar-item ">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-credit"></i>
 						</span>
-					<span class="aui-tabBar-item-text">分类</span>
+					<span class="aui-tabBar-item-text" v-on:click="showBookCatalog()">分类</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookTrend()">
+				<a href="javascript:;" class="aui-tabBar-item aui-tabBar-item-active">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-credit"></i>
 						</span>
 					<span class="aui-tabBar-item-text">动态</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item  aui-tabBar-item-active" >
+				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookShelf()">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-ions"></i>
 						</span>
@@ -117,6 +129,5 @@
 </script>
 
 <style>
-	@import '../../static/bookshelf/css/style.css'
-
+	@import '../../static/trends/css/style.css';
 </style>

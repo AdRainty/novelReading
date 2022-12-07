@@ -1,5 +1,6 @@
 <template>
 	<view>
+		<view class="status_bar" style="height: var(--status-bar-height); width: 100%;"></view>
 		<section class="aui-flexView">
 			<header class="aui-navBar aui-navBar-fixed">
 				<div class="aui-center">
@@ -128,19 +129,25 @@
 						</span>
 					<span class="aui-tabBar-item-text">书城</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item ">
+				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookCatalog()">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-credit"></i>
 						</span>
 					<span class="aui-tabBar-item-text">分类</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item "  v-on:click="showBookShelf">
+				<a href="javascript:;" class="aui-tabBar-item " v-on:click="showBookTrend()">
+						<span class="aui-tabBar-item-icon">
+							<i class="icon icon-credit"></i>
+						</span>
+					<span class="aui-tabBar-item-text">动态</span>
+				</a>
+				<a href="javascript:;" class="aui-tabBar-item "  v-on:click="showBookShelf()">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-ions"></i>
 						</span>
 					<span class="aui-tabBar-item-text">书架</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item ">
+				<a href="javascript:;" class="aui-tabBar-item "  v-on:click="showUserCenter()">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-info"></i>
 						</span>
@@ -166,25 +173,30 @@
 				})
 			},
 			showBookStore(){
-				uni.navigateTo({
+				uni.redirectTo({
 					url: '/pages/index/index'
 				})
 			},
-			// showBookCatalog(){
-			// 	uni.navigateTo({
-			// 		url: '/pages/catalog/catalog'
-			// 	})
-			// },
+			showBookTrend(){
+				uni.redirectTo({
+					url: '/pages/trends/trends'
+				})
+			},
+			showBookCatalog(){
+				uni.redirectTo({
+					url: '/pages/catalog/catalog'
+				})
+			},
 			showBookShelf(){
-				uni.navigateTo({
+				uni.redirectTo({
 					url: '/pages/bookshelf/bookshelf'
 				})
 			},
-			// showUserCenter(){
-			// 	uni.navigateTo({
-			// 		url: '/pages/user/center'
-			// 	})
-			// },
+			showUserCenter(){
+				uni.redirectTo({
+					url: '/pages/usercenter/usercenter'
+				})
+			}
 			
 		}
 	}

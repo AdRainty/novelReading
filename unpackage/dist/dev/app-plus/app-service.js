@@ -35,7 +35,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$3 = {
+  const _sfc_main$7 = {
     data() {
       return {};
     },
@@ -46,19 +46,38 @@ if (uni.restoreGlobal) {
         });
       },
       showBookStore() {
-        uni.navigateTo({
+        uni.redirectTo({
           url: "/pages/index/index"
         });
       },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
       showBookShelf() {
-        uni.navigateTo({
+        uni.redirectTo({
           url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
         });
       }
     }
   };
-  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("view", {
+        class: "status_bar",
+        style: { "height": "var(--status-bar-height)", "width": "100%" }
+      }),
       vue.createElementVNode("section", { class: "aui-flexView" }, [
         vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
           vue.createElementVNode("div", { class: "aui-center" }, [
@@ -298,7 +317,8 @@ if (uni.restoreGlobal) {
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
-            class: "aui-tabBar-item"
+            class: "aui-tabBar-item",
+            onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookCatalog())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-credit" })
@@ -308,7 +328,17 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("a", {
             href: "javascript:;",
             class: "aui-tabBar-item",
-            onClick: _cache[2] || (_cache[2] = (...args) => $options.showBookShelf && $options.showBookShelf(...args))
+            onClick: _cache[3] || (_cache[3] = ($event) => $options.showBookTrend())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[4] || (_cache[4] = ($event) => $options.showBookShelf())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-ions" })
@@ -317,7 +347,8 @@ if (uni.restoreGlobal) {
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
-            class: "aui-tabBar-item"
+            class: "aui-tabBar-item",
+            onClick: _cache[5] || (_cache[5] = ($event) => $options.showUserCenter())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-info" })
@@ -328,14 +359,14 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "E:/Code/novelReading/pages/index/index.vue"]]);
-  const _sfc_main$2 = {
+  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/index/index.vue"]]);
+  const _sfc_main$6 = {
     data() {
       return {};
     },
     methods: {}
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("section", { class: "aui-flexView" }, [
       vue.createElementVNode("section", { class: "aui-scrollView" }, [
         vue.createElementVNode("div", { class: "aui-flex aui-flex-one" }, [
@@ -498,8 +529,8 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  var PagesBookBook = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "E:/Code/novelReading/pages/book/book.vue"]]);
-  const _sfc_main$1 = {
+  var PagesBookBook = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/book/book.vue"]]);
+  const _sfc_main$5 = {
     data() {
       return {};
     },
@@ -510,19 +541,38 @@ if (uni.restoreGlobal) {
         });
       },
       showBookStore() {
-        uni.navigateTo({
+        uni.redirectTo({
           url: "/pages/index/index"
         });
       },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
       showBookShelf() {
-        uni.navigateTo({
+        uni.redirectTo({
           url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
         });
       }
     }
   };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("view", {
+        class: "status_bar",
+        style: { "height": "var(--status-bar-height)", "width": "100%" }
+      }),
       vue.createElementVNode("section", { class: "aui-flexView" }, [
         vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
           vue.createElementVNode("a", {
@@ -574,7 +624,7 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("a", {
             href: "javascript:;",
             class: "aui-tabBar-item",
-            onClick: _cache[0] || (_cache[0] = (...args) => $options.showBookStore && $options.showBookStore(...args))
+            onClick: _cache[0] || (_cache[0] = ($event) => $options.showBookStore())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-loan" })
@@ -583,12 +633,23 @@ if (uni.restoreGlobal) {
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
-            class: "aui-tabBar-item"
+            class: "aui-tabBar-item",
+            onClick: _cache[1] || (_cache[1] = ($event) => $options.showBookCatalog())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-credit" })
             ]),
             vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u5206\u7C7B")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookTrend())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
@@ -601,7 +662,8 @@ if (uni.restoreGlobal) {
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
-            class: "aui-tabBar-item"
+            class: "aui-tabBar-item",
+            onClick: _cache[3] || (_cache[3] = ($event) => $options.showUserCenter())
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-info" })
@@ -612,10 +674,766 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  var PagesBookshelfBookshelf = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "E:/Code/novelReading/pages/bookshelf/bookshelf.vue"]]);
+  var PagesBookshelfBookshelf = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/bookshelf/bookshelf.vue"]]);
+  const _sfc_main$4 = {
+    data() {
+      return {};
+    },
+    methods: {
+      showBookDetail() {
+        uni.navigateTo({
+          url: "/pages/book/book"
+        });
+      },
+      showBookStore() {
+        uni.redirectTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
+      showBookShelf() {
+        uni.redirectTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
+        });
+      },
+      showBookAttendion() {
+        uni.redirectTo({
+          url: "/pages/trends/attention"
+        });
+      }
+    }
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+      vue.createElementVNode("view", {
+        class: "status_bar",
+        style: { "height": "var(--status-bar-height)", "width": "100%" }
+      }),
+      vue.createElementVNode("view", null, [
+        vue.createElementVNode("section", { class: "aui-flexView" }, [
+          vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
+            vue.createElementVNode("div", { class: "aui-center aui-center-clear" }, [
+              vue.createElementVNode("div", { class: "aui-head-nav" }, [
+                vue.createElementVNode("a", {
+                  href: "javascript:;",
+                  class: "aui-active-hover"
+                }, "\u63A8\u8350"),
+                vue.createElementVNode("a", {
+                  href: "javascript:;",
+                  onClick: _cache[0] || (_cache[0] = ($event) => $options.showBookAttendion())
+                }, "\u5173\u6CE8")
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-navBar-item"
+            }, [
+              vue.createElementVNode("i", { class: "icon icon-add" }),
+              vue.createElementVNode("i", { class: "icon icon-search" })
+            ])
+          ]),
+          vue.createElementVNode("section", { class: "aui-scrollView" }, [
+            vue.createElementVNode("div", { class: "aui-link-list" }, [
+              vue.createElementVNode("a", {
+                href: "javascript:;",
+                class: "aui-link-item"
+              }, [
+                vue.createElementVNode("div", { class: "aui-flex" }, [
+                  vue.createElementVNode("div", { class: "aui-ges-user" }, [
+                    vue.createElementVNode("image", {
+                      mode: "widthFix",
+                      src: "/static/trends/images/user-logo-000.png",
+                      alt: ""
+                    })
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("h3", null, "\u6709\u4E66\u6545\u4E8B"),
+                    vue.createElementVNode("p", null, "52\u5206\u949F")
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-more-icon" }, [
+                    vue.createElementVNode("i", { class: "icon icon-more" })
+                  ])
+                ]),
+                vue.createElementVNode("div", {
+                  class: "aui-flex",
+                  style: { "padding-top": "2px" }
+                }, [
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("h4", null, "\u6709\u6545\u4E8B\u4E66:\u5927\u5B66\u8001\u5E08\u73A9\u8F6C\u77ED\u89C6\u9891\u5927\u5B66\u8001\u5E08\u73A9\u8F6C\u77ED\u89C6\u9891"),
+                    vue.createElementVNode("p", null, "\u5728\u6709\u6545\u4E8B\u4E66\u7684\uFF0C\u9047\u89C1\u4E66\u53CB\u4EEC\u81EA\u5DF1\u7684\u6545\u4E8B\uFF0C\u4E0A\u4E00\u671F\uFF0C\u8DDF\u6211\u4EEC\u89C1\u9762\u7684\u4E66\u53CB\u662F\u4E0D\u613F\u610F\u8BA9\u5B69\u5B50\u77A7\u4E0D\u8D77\u81EA\u5DF1\u800C\u662F\u4E00\u5E74\u6012\u542C100\u591A\u672C\u4E66")
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-book-img" }, [
+                    vue.createElementVNode("image", {
+                      mode: "widthFix",
+                      src: "/static/trends/images/ad-text1.png",
+                      alt: ""
+                    })
+                  ])
+                ]),
+                vue.createElementVNode("div", {
+                  class: "aui-flex",
+                  style: { "padding-top": "0" }
+                }, [
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("span", null, [
+                      vue.createElementVNode("i", { class: "icon icon-dz" }),
+                      vue.createTextVNode("192")
+                    ]),
+                    vue.createElementVNode("span", null, [
+                      vue.createElementVNode("i", { class: "icon icon-pl" }),
+                      vue.createTextVNode("290")
+                    ])
+                  ])
+                ]),
+                vue.createElementVNode("div", { class: "divHeight" })
+              ])
+            ]),
+            vue.createElementVNode("div", { style: { "height": "53px" } })
+          ]),
+          vue.createElementVNode("footer", { class: "aui-footer aui-footer-fixed" }, [
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[1] || (_cache[1] = ($event) => $options.showBookStore())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-loan" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u57CE")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookCatalog())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-credit" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u5206\u7C7B")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item aui-tabBar-item-active"
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-credit" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[3] || (_cache[3] = ($event) => $options.showBookShelf())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-ions" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u67B6")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[4] || (_cache[4] = ($event) => $options.showUserCenter())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-info" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u6211\u7684")
+            ])
+          ])
+        ])
+      ])
+    ], 64);
+  }
+  var PagesTrendsTrends = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/trends/trends.vue"]]);
+  const _sfc_main$3 = {
+    data() {
+      return {};
+    },
+    methods: {
+      showBookDetail() {
+        uni.navigateTo({
+          url: "/pages/book/book"
+        });
+      },
+      showBookStore() {
+        uni.redirectTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
+      showBookShelf() {
+        uni.redirectTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
+        });
+      }
+    }
+  };
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
+      vue.createElementVNode("view", {
+        class: "status_bar",
+        style: { "height": "var(--status-bar-height)", "width": "100%" }
+      }),
+      vue.createElementVNode("view", null, [
+        vue.createElementVNode("section", { class: "aui-flexView" }, [
+          vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
+            vue.createElementVNode("div", { class: "aui-center aui-center-clear" }, [
+              vue.createElementVNode("div", { class: "aui-head-nav" }, [
+                vue.createElementVNode("a", {
+                  href: "javascript:;",
+                  onClick: _cache[0] || (_cache[0] = ($event) => $options.showBookTrend())
+                }, " \u63A8\u8350"),
+                vue.createElementVNode("a", {
+                  href: "javascript:;",
+                  class: "aui-active-hover"
+                }, "\u5173\u6CE8")
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-navBar-item"
+            }, [
+              vue.createElementVNode("i", { class: "icon icon-add" }),
+              vue.createElementVNode("i", { class: "icon icon-search" })
+            ])
+          ]),
+          vue.createElementVNode("section", { class: "aui-scrollView" }, [
+            vue.createElementVNode("div", { class: "aui-link-list" }, [
+              vue.createElementVNode("a", {
+                href: "javascript:;",
+                class: "aui-link-item"
+              }, [
+                vue.createElementVNode("div", { class: "aui-flex" }, [
+                  vue.createElementVNode("div", { class: "aui-ges-user" }, [
+                    vue.createElementVNode("image", {
+                      mode: "widthFix",
+                      src: "/static/trends/images/user-logo-000.png",
+                      alt: ""
+                    })
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("h3", null, "\u6709\u4E66\u6545\u4E8B"),
+                    vue.createElementVNode("p", null, "52\u5206\u949F")
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-more-icon" }, [
+                    vue.createElementVNode("i", { class: "icon icon-more" })
+                  ])
+                ]),
+                vue.createElementVNode("div", {
+                  class: "aui-flex",
+                  style: { "padding-top": "2px" }
+                }, [
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("h4", null, "\u6709\u6545\u4E8B\u4E66:\u5927\u5B66\u8001\u5E08\u73A9\u8F6C\u77ED\u89C6\u9891\u5927\u5B66\u8001\u5E08\u73A9\u8F6C\u77ED\u89C6\u9891"),
+                    vue.createElementVNode("p", null, "\u5728\u6709\u6545\u4E8B\u4E66\u7684\uFF0C\u9047\u89C1\u4E66\u53CB\u4EEC\u81EA\u5DF1\u7684\u6545\u4E8B\uFF0C\u4E0A\u4E00\u671F\uFF0C\u8DDF\u6211\u4EEC\u89C1\u9762\u7684\u4E66\u53CB\u662F\u4E0D\u613F\u610F\u8BA9\u5B69\u5B50\u77A7\u4E0D\u8D77\u81EA\u5DF1\u800C\u662F\u4E00\u5E74\u6012\u542C100\u591A\u672C\u4E66")
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-book-img" }, [
+                    vue.createElementVNode("image", {
+                      mode: "widthFix",
+                      src: "/static/trends/images/ad-text1.png",
+                      alt: ""
+                    })
+                  ])
+                ]),
+                vue.createElementVNode("div", {
+                  class: "aui-flex",
+                  style: { "padding-top": "0" }
+                }, [
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("span", null, [
+                      vue.createElementVNode("i", { class: "icon icon-dz" }),
+                      vue.createTextVNode("192")
+                    ]),
+                    vue.createElementVNode("span", null, [
+                      vue.createElementVNode("i", { class: "icon icon-pl" }),
+                      vue.createTextVNode("290")
+                    ])
+                  ])
+                ]),
+                vue.createElementVNode("div", { class: "divHeight" })
+              ])
+            ]),
+            vue.createElementVNode("div", { style: { "height": "53px" } })
+          ]),
+          vue.createElementVNode("footer", { class: "aui-footer aui-footer-fixed" }, [
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[1] || (_cache[1] = ($event) => $options.showBookStore())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-loan" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u57CE")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item"
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-credit" })
+              ]),
+              vue.createElementVNode("span", {
+                class: "aui-tabBar-item-text",
+                onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookCatalog())
+              }, "\u5206\u7C7B")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item aui-tabBar-item-active"
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-credit" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[3] || (_cache[3] = ($event) => $options.showBookShelf())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-ions" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u67B6")
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-tabBar-item",
+              onClick: _cache[4] || (_cache[4] = ($event) => $options.showUserCenter())
+            }, [
+              vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+                vue.createElementVNode("i", { class: "icon icon-info" })
+              ]),
+              vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u6211\u7684")
+            ])
+          ])
+        ])
+      ])
+    ], 64);
+  }
+  var PagesTrendsAttention = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/trends/attention.vue"]]);
+  const _sfc_main$2 = {
+    data() {
+      return {};
+    },
+    methods: {
+      showBookDetail() {
+        uni.navigateTo({
+          url: "/pages/book/book"
+        });
+      },
+      showBookStore() {
+        uni.redirectTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
+      showBookShelf() {
+        uni.redirectTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
+        });
+      }
+    }
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("section", { class: "aui-flexView" }, [
+        vue.createElementVNode("section", { class: "aui-scrollView" }, [
+          vue.createElementVNode("div", { class: "aui-callUser-head b-line" }, [
+            vue.createElementVNode("div", { class: "aui-callUser-user" }, [
+              vue.createElementVNode("image", {
+                mode: "widthFix",
+                src: "/static/usercenter/images/user-logo-001.png",
+                alt: ""
+              })
+            ]),
+            vue.createElementVNode("div", { class: "aui-callUser-title" }, [
+              vue.createElementVNode("h2", null, "\u70B9\u51FB\u767B\u5F55")
+            ])
+          ]),
+          vue.createElementVNode("div", { class: "divHeight b-line" }),
+          vue.createElementVNode("div", { class: "aui-course-list" }, [
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-001.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u6211\u7684\u94B1\u5305")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" }, [
+                vue.createElementVNode("p", null, "0\u4E66\u8C46 1\u5F20\u4E66\u5238")
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-002.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u4E66\u8C46\u5145\u503C")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" }, [
+                vue.createElementVNode("button", null, "\u5145\u503C")
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-003.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u5F00\u901A\u4F1A\u5458")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" }, [
+                vue.createElementVNode("button", null, "\u5F00\u901A")
+              ])
+            ]),
+            vue.createElementVNode("div", { class: "divHeight" }),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-004.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u6211\u7684\u7B7E\u5230")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" }, [
+                vue.createElementVNode("p", null, "\u5DF2\u7B7E\u5230")
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-005.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u6253\u8D4F\u8BB0\u5F55")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" })
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-006.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u6211\u7684\u8BC4\u8BBA")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" })
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-flex b-line"
+            }, [
+              vue.createElementVNode("div", { class: "aui-cou-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/usercenter/images/icon-call-007.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u6211\u7684\u6536\u85CF")
+              ]),
+              vue.createElementVNode("div", { class: "aui-arrow" })
+            ])
+          ])
+        ]),
+        vue.createElementVNode("footer", { class: "aui-footer aui-footer-fixed" }, [
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[0] || (_cache[0] = ($event) => $options.showBookStore())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-loan" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u57CE")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[1] || (_cache[1] = ($event) => $options.showBookCatalog())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u5206\u7C7B")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookTrend())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[3] || (_cache[3] = ($event) => $options.showBookShelf())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-ions" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u67B6")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item aui-tabBar-item-active"
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-info" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u6211\u7684")
+          ])
+        ])
+      ])
+    ]);
+  }
+  var PagesUsercenterUsercenter = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/usercenter/usercenter.vue"]]);
+  const _sfc_main$1 = {
+    data() {
+      return {};
+    },
+    methods: {
+      showBookDetail() {
+        uni.navigateTo({
+          url: "/pages/book/book"
+        });
+      },
+      showBookStore() {
+        uni.redirectTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookTrend() {
+        uni.redirectTo({
+          url: "/pages/trends/trends"
+        });
+      },
+      showBookCatalog() {
+        uni.redirectTo({
+          url: "/pages/catalog/catalog"
+        });
+      },
+      showBookShelf() {
+        uni.redirectTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
+      },
+      showUserCenter() {
+        uni.redirectTo({
+          url: "/pages/usercenter/usercenter"
+        });
+      }
+    }
+  };
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("view", {
+        class: "status_bar",
+        style: { "height": "var(--status-bar-height)", "width": "100%" }
+      }),
+      vue.createElementVNode("section", { class: "aui-flexView" }, [
+        vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed b-line" }, [
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-navBar-item"
+          }, [
+            vue.createElementVNode("i", { class: "icon icon-return" })
+          ]),
+          vue.createElementVNode("div", { class: "aui-center" }, [
+            vue.createElementVNode("span", { class: "aui-center-title" }, "\u54C1\u7C7B")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-navBar-item"
+          }, [
+            vue.createElementVNode("i", { class: "icon icon-sys" })
+          ])
+        ]),
+        vue.createElementVNode("section", { class: "aui-scrollView" }, [
+          vue.createElementVNode("div", { class: "aui-palace" }, [
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-palace-grid aui-flex"
+            }, [
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u793C\u7269"),
+                vue.createElementVNode("p", null, "\u4E13\u6CBB\u9001\u793C\u56F0\u96BE\u6237")
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/catalog/images/icon-pl-001.png",
+                  alt: ""
+                })
+              ])
+            ]),
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-palace-grid aui-flex"
+            }, [
+              vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                vue.createElementVNode("h2", null, "\u5BB6\u5C45"),
+                vue.createElementVNode("p", null, "\u6709\u7231\u548C\u4F60\u4EEC\u624D\u7B97\u6709\u5BB6")
+              ]),
+              vue.createElementVNode("div", { class: "aui-flex-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/catalog/images/icon-pl-002.png",
+                  alt: ""
+                })
+              ])
+            ])
+          ])
+        ]),
+        vue.createElementVNode("footer", { class: "aui-footer aui-footer-fixed" }, [
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[0] || (_cache[0] = ($event) => $options.showBookStore())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-loan" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u57CE")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item aui-tabBar-item-active"
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u5206\u7C7B")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[1] || (_cache[1] = ($event) => $options.showBookTrend())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u52A8\u6001")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[2] || (_cache[2] = ($event) => $options.showBookShelf())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-ions" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u67B6")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[3] || (_cache[3] = ($event) => $options.showUserCenter())
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-info" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u6211\u7684")
+          ])
+        ])
+      ])
+    ]);
+  }
+  var PagesCatalogCatalog = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/catalog/catalog.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/book/book", PagesBookBook);
   __definePage("pages/bookshelf/bookshelf", PagesBookshelfBookshelf);
+  __definePage("pages/trends/trends", PagesTrendsTrends);
+  __definePage("pages/trends/attention", PagesTrendsAttention);
+  __definePage("pages/usercenter/usercenter", PagesUsercenterUsercenter);
+  __definePage("pages/catalog/catalog", PagesCatalogCatalog);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -634,7 +1452,7 @@ if (uni.restoreGlobal) {
       formatAppLog("log", "at App.vue:10", "App Hide");
     }
   };
-  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "E:/Code/novelReading/App.vue"]]);
+  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {
