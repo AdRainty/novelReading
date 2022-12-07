@@ -9,10 +9,6 @@
 						<a href="javascript:;" class="aui-active-hover">关注</a>
 					</div>
 				</div>
-				<a href="javascript:;" class="aui-navBar-item">
-					<i class="icon icon-add"></i>
-					<i class="icon icon-search"></i>
-				</a>
 			</header>
 			<section class="aui-scrollView">
 				<div class="aui-link-list">

@@ -9,10 +9,6 @@
 				<div class="aui-center">
 					<span class="aui-center-title"></span>
 				</div>
-				<a href="javascript:;" class="aui-navBar-item">
-					<i class="icon icon-search"></i>
-					<i class="icon icon-more"></i>
-				</a>
 			</header>
 			<section class="aui-scrollView">
 				<div class="aui-call-box">

@@ -15,7 +15,7 @@
 			</header>
 			<section class="aui-scrollView">
 				<div class="aui-palace">
-					<a href="javascript:;" class="aui-palace-grid aui-flex">
+					<a href="javascript:;" class="aui-palace-grid aui-flex" v-on:click="showBookItem()">
 						<div class="aui-flex-box">
 							<h2>礼物</h2>
 							<p>专治送礼困难户</p>
@@ -24,7 +24,7 @@
 							<image mode='widthFix' src="../../static/catalog/images/icon-pl-001.png" alt=""></image>
 						</div>
 					</a>
-					<a href="javascript:;" class="aui-palace-grid aui-flex">
+					<a href="javascript:;" class="aui-palace-grid aui-flex" v-on:click="showBookItem()">
 						<div class="aui-flex-box">
 							<h2>家居</h2>
 							<p>有爱和你们才算有家</p>
@@ -107,6 +107,11 @@
 			showUserCenter(){
 				uni.redirectTo({
 					url: '/pages/usercenter/usercenter'
+				})
+			},
+			showBookItem(){
+				uni.navigateTo({
+					url: '/pages/catalog/item'
 				})
 			}
 			
