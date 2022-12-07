@@ -35,7 +35,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$2 = {
+  const _sfc_main$3 = {
     data() {
       return {};
     },
@@ -44,10 +44,20 @@ if (uni.restoreGlobal) {
         uni.navigateTo({
           url: "/pages/book/book"
         });
+      },
+      showBookStore() {
+        uni.navigateTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookShelf() {
+        uni.navigateTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
       }
     }
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", null, [
       vue.createElementVNode("section", { class: "aui-flexView" }, [
         vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
@@ -251,7 +261,8 @@ if (uni.restoreGlobal) {
             vue.createElementVNode("h5", null, "\u7F51\u53CB\u4EEC\u90FD\u5728\u770B\u7684\u5C0F\u8BF4"),
             vue.createElementVNode("a", {
               href: "javascript:;",
-              class: "aui-flex"
+              class: "aui-flex",
+              onClick: _cache[1] || (_cache[1] = (...args) => $options.showBookDetail && $options.showBookDetail(...args))
             }, [
               vue.createElementVNode("div", { class: "aui-book-img" }, [
                 vue.createElementVNode("image", {
@@ -296,7 +307,8 @@ if (uni.restoreGlobal) {
           ]),
           vue.createElementVNode("a", {
             href: "javascript:;",
-            class: "aui-tabBar-item"
+            class: "aui-tabBar-item",
+            onClick: _cache[2] || (_cache[2] = (...args) => $options.showBookShelf && $options.showBookShelf(...args))
           }, [
             vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
               vue.createElementVNode("i", { class: "icon icon-ions" })
@@ -316,14 +328,14 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/index/index.vue"]]);
-  const _sfc_main$1 = {
+  var PagesIndexIndex = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "E:/Code/novelReading/pages/index/index.vue"]]);
+  const _sfc_main$2 = {
     data() {
       return {};
     },
     methods: {}
   };
-  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("section", { class: "aui-flexView" }, [
       vue.createElementVNode("section", { class: "aui-scrollView" }, [
         vue.createElementVNode("div", { class: "aui-flex aui-flex-one" }, [
@@ -486,9 +498,124 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  var PagesBookBook = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/pages/book/book.vue"]]);
+  var PagesBookBook = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "E:/Code/novelReading/pages/book/book.vue"]]);
+  const _sfc_main$1 = {
+    data() {
+      return {};
+    },
+    methods: {
+      showBookDetail() {
+        uni.navigateTo({
+          url: "/pages/book/book"
+        });
+      },
+      showBookStore() {
+        uni.navigateTo({
+          url: "/pages/index/index"
+        });
+      },
+      showBookShelf() {
+        uni.navigateTo({
+          url: "/pages/bookshelf/bookshelf"
+        });
+      }
+    }
+  };
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", null, [
+      vue.createElementVNode("section", { class: "aui-flexView" }, [
+        vue.createElementVNode("header", { class: "aui-navBar aui-navBar-fixed" }, [
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-navBar-item"
+          }, " \u6211\u7684\u4E66\u67B6 "),
+          vue.createElementVNode("div", { class: "aui-center" }, [
+            vue.createElementVNode("span", { class: "aui-center-title" })
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-navBar-item"
+          }, [
+            vue.createElementVNode("i", { class: "icon icon-search" }),
+            vue.createElementVNode("i", { class: "icon icon-more" })
+          ])
+        ]),
+        vue.createElementVNode("section", { class: "aui-scrollView" }, [
+          vue.createElementVNode("div", { class: "aui-call-box" }, [
+            vue.createElementVNode("h1", null, "\u6700\u8FD1\u9605\u8BFB\u7684\u4E66\u90FD\u4F1A\u653E\u5728\u8FD9\u91CC")
+          ]),
+          vue.createElementVNode("div", { class: "aui-list-theme" }, [
+            vue.createElementVNode("a", {
+              href: "javascript:;",
+              class: "aui-list-theme-item"
+            }, [
+              vue.createElementVNode("div", { class: "aui-list-img" }, [
+                vue.createElementVNode("image", {
+                  mode: "widthFix",
+                  src: "/static/bookshelf/images/call-book-01.png",
+                  alt: ""
+                })
+              ]),
+              vue.createElementVNode("div", { class: "aui-list-title" }, [
+                vue.createElementVNode("h3", null, "\u6843\u82B1\u6751\u7684\u533B\u751F"),
+                vue.createElementVNode("div", { class: "aui-flex" }, [
+                  vue.createElementVNode("div", { class: "aui-flex-box" }, [
+                    vue.createElementVNode("span", null, "\u8FDE\u8F7D")
+                  ]),
+                  vue.createElementVNode("div", { class: "aui-right-text" }, [
+                    vue.createElementVNode("span", null, "\u672A\u8BFB")
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]),
+        vue.createElementVNode("footer", { class: "aui-footer aui-footer-fixed" }, [
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item",
+            onClick: _cache[0] || (_cache[0] = (...args) => $options.showBookStore && $options.showBookStore(...args))
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-loan" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u57CE")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item"
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-credit" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u5206\u7C7B")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item aui-tabBar-item-active"
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-ions" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u4E66\u67B6")
+          ]),
+          vue.createElementVNode("a", {
+            href: "javascript:;",
+            class: "aui-tabBar-item"
+          }, [
+            vue.createElementVNode("span", { class: "aui-tabBar-item-icon" }, [
+              vue.createElementVNode("i", { class: "icon icon-info" })
+            ]),
+            vue.createElementVNode("span", { class: "aui-tabBar-item-text" }, "\u6211\u7684")
+          ])
+        ])
+      ])
+    ]);
+  }
+  var PagesBookshelfBookshelf = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "E:/Code/novelReading/pages/bookshelf/bookshelf.vue"]]);
   __definePage("pages/index/index", PagesIndexIndex);
   __definePage("pages/book/book", PagesBookBook);
+  __definePage("pages/bookshelf/bookshelf", PagesBookshelfBookshelf);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -507,7 +634,7 @@ if (uni.restoreGlobal) {
       formatAppLog("log", "at App.vue:10", "App Hide");
     }
   };
-  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "D:/\u4E2A\u4EBA\u9879\u76EE/uni-app/novelReading/App.vue"]]);
+  var App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "E:/Code/novelReading/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {

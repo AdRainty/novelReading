@@ -109,7 +109,7 @@
 				<div class="divHeight"></div>
 				<div class="aui-book-list">
 					<h5>网友们都在看的小说</h5>
-					<a href="javascript:;" class="aui-flex">
+					<a href="javascript:;" class="aui-flex" v-on:click="showBookDetail">
 						<div class="aui-book-img">
 							<image mode='widthFix' src="../../static/bookStore/images/book5.png" alt=""></image>
 						</div>
@@ -134,7 +134,7 @@
 						</span>
 					<span class="aui-tabBar-item-text">分类</span>
 				</a>
-				<a href="javascript:;" class="aui-tabBar-item ">
+				<a href="javascript:;" class="aui-tabBar-item "  v-on:click="showBookShelf">
 						<span class="aui-tabBar-item-icon">
 							<i class="icon icon-ions"></i>
 						</span>
@@ -164,13 +164,33 @@
 				uni.navigateTo({
 					url: '/pages/book/book'
 				})
-			}
+			},
+			showBookStore(){
+				uni.navigateTo({
+					url: '/pages/index/index'
+				})
+			},
+			// showBookCatalog(){
+			// 	uni.navigateTo({
+			// 		url: '/pages/catalog/catalog'
+			// 	})
+			// },
+			showBookShelf(){
+				uni.navigateTo({
+					url: '/pages/bookshelf/bookshelf'
+				})
+			},
+			// showUserCenter(){
+			// 	uni.navigateTo({
+			// 		url: '/pages/user/center'
+			// 	})
+			// },
 			
 		}
 	}
 </script>
 
 <style>
-	@import '../../static/bookStore/css/style.css'
+	@import '../../static/bookStore/css/style.css';
 
 </style>

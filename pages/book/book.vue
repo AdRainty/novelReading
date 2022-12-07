@@ -123,5 +123,5 @@
 </script>
 
 <style>
-	@import '../../static/book/css/style.css'
+	@import '../../static/book/css/style.css';
 </style>
